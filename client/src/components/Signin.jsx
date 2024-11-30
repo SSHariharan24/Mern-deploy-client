@@ -13,7 +13,7 @@ export const Signin = () => {
    
       const handleSubmit = (e) => {
       e.preventDefault()
-      axios.post('https://mern-deploy-server-7gsy.onrender.com/#/login', { email, password})
+      axios.post('https://mern-deploy-server-7gsy.onrender.com/#/api/login', { email, password})
       .then(result => {console.log(result.data)
         if(result.data.Status === 'Success'){
           if(result.data.role === 'admin'){
