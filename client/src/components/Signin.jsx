@@ -71,9 +71,9 @@ export const Signin = () => {
     <br />
     <Link to="/forget-password" className="text-indigo-800 hover:underline">Forgot Password</Link>
     <div className="text-center mt-4">
-      <a href="/register" className="text-indigo-600 hover:underline">
+      <Link to="/register" className="text-indigo-600 hover:underline">
         Don’t have an account? Sign Up
-      </a>
+      </Link>
     </div>
   </div>
 </div>

@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from 'axios'
-// import './App.css'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 
 function Signup() {
@@ -23,13 +22,11 @@ function Signup() {
 
   return (
    <div className="min-h-screen flex items-center justify-center bg-gray-100 relative">
-  {/* Background Image with Blur */}
-  <div
-    className="absolute inset-0 bg-cover bg-center z-0"
+  <div className="absolute inset-0 bg-cover bg-center z-0"
     style={{
-      backgroundImage: "url('/img1.jpeg')", // Path to the image in the public folder
-      // filter: "blur(5px)", // Apply blur to the background image
-      backgroundSize: "cover", // Ensures the background image covers the full container
+      backgroundImage: "url('/img1.jpeg')", 
+      // filter: "blur(5px)", 
+      backgroundSize: "cover", 
       backgroundPosition: "center",
     }}
   ></div>
@@ -77,9 +74,9 @@ function Signup() {
       </button>
     </form>
     <div className="text-center mt-4">
-      <a href="/login" className="text-indigo-600 hover:underline">
+      <Link to="/login" className="text-indigo-600 hover:underline">
         Already have an account? Sign In
-      </a>
+      </Link>
     </div>
   </div>
 </div>
