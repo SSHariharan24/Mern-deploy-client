@@ -27,12 +27,24 @@ export const ForgetPassword = () => {
       .catch(err => console.log(err.message))
     }
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-    <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
-      <h2 className="text-2xl font-bold mb-6 text-center">Forgot Password</h2>
+    <div className="min-h-screen flex items-center justify-center bg-gray-100 relative">
+    {/* Background Image with Blur */}
+    <div
+      className="absolute inset-0 bg-cover bg-center z-0"
+      style={{
+        backgroundImage: "url('/img1.jpeg')", // Path to your background image
+        // filter: "blur(8px)", 
+        backgroundSize: "cover", // Cover the full container
+        backgroundPosition: "center",
+      }}
+    ></div>
+  
+    
+    <div className="relative z-10 bg-opacity-30 backdrop-blur-lg border border-white/20 p-8 rounded-lg shadow-lg w-full max-w-md">
+      <h2 className="text-2xl font-bold mb-6 text-center text-black">Forgot Password</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
-          <label className="block text-gray-700">Email</label>
+          <label className="block text-white">Email</label>
           <input
             type="email"
             className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
@@ -50,6 +62,7 @@ export const ForgetPassword = () => {
       </form>
     </div>
   </div>
+  
   )
 }
 export default ForgetPassword

@@ -14,7 +14,7 @@ function Signup() {
  
     const handleSubmit = (e) => {
     e.preventDefault()
-    axios.post('https://mern-deploy-server-7gsy.onrender.com/register', {name, email, password})
+    axios.post('https://mern-deploy-server-7gsy.onrender.com/#/register', {name, email, password})
     .then(result => {console.log(result)
         navigate('/login')
     })
