@@ -14,7 +14,7 @@ export const ResetPassword = () => {
    
       const handleSubmit = (e) => {
       e.preventDefault()
-      axios.post("http://localhost:4000/reset-password/"+token, {password})
+      axios.post("https://mern-deploy-server-7gsy.onrender.com/reset-password/"+token, {password})
       .then(result => {
         if(result.data.status){
            navigate('/login') 
