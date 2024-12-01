@@ -58,6 +58,7 @@ export const Signin = () => {
           className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
           placeholder="Enter your password"
           required
+          autocomplete="current-password"
           onChange={(e) => setPassword(e.target.value)}
         />
       </div>
