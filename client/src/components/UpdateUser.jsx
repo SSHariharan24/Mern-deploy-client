@@ -20,7 +20,7 @@ export const UpdateUser = () => {
 
   const Update = (e) =>{
     e.preventDefault()
-    axios.put("http://localhost:4000/updateUser/"+id,{name,email,age})
+    axios.put("https://mern-deploy-client-q86t.onrender.com/updateUser/"+id,{name,email,age})
     .then(result => {
       console.log(result)
       navigate('/user')
