@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from 'axios'
+// import './App.css'
 import { useNavigate,Link } from 'react-router-dom';
 
 export const Signin = () => {
@@ -13,7 +14,7 @@ export const Signin = () => {
    
       const handleSubmit = (e) => {
       e.preventDefault()
-      axios.post('https://mern-deploy-server-7gsy.onrender.com/login', { email, password})
+      axios.post('http://localhost:4000/login', { email, password})
       .then(result => {console.log(result.data)
         if(result.data.Status === 'Success'){
           if(result.data.role === 'admin'){
@@ -28,16 +29,18 @@ export const Signin = () => {
     }
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 relative">
-  <div className="absolute inset-0 bg-cover bg-center z-0"
+  {/* Background Image with Blur */}
+  <div
+    className="absolute inset-0 bg-cover bg-center z-0"
     style={{
-      backgroundImage: "url('/img1.jpeg')", 
-      // filter: "blur(8px)", 
-      backgroundSize: "cover", 
+      backgroundImage: "url('/img1.jpeg')", // Path to the image in the public folder
+      // filter: "blur(8px)", // Apply blur to the background image
+      backgroundSize: "cover", // Ensures the background image covers the full container
       backgroundPosition: "center",
     }}
   ></div>
 
-  
+  {/* Sign In Form with Glass Effect */}
   <div className="relative z-10 bg-opacity-30 backdrop-blur-lg border border-white/20 p-8 rounded-lg shadow-lg w-full max-w-md">
     <h2 className="text-2xl font-bold mb-6 text-center text-black">Sign In</h2>
     <form onSubmit={handleSubmit}>
@@ -48,7 +51,6 @@ export const Signin = () => {
           className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
           placeholder="Enter your email"
           required
-          autocomplete="User-name"
           onChange={(e) => setEmail(e.target.value)}
         />
       </div>
@@ -59,7 +61,6 @@ export const Signin = () => {
           className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
           placeholder="Enter your password"
           required
-          autocomplete="current-password"
           onChange={(e) => setPassword(e.target.value)}
         />
       </div>
@@ -73,9 +74,9 @@ export const Signin = () => {
     <br />
     <Link to="/forget-password" className="text-indigo-800 hover:underline">Forgot Password</Link>
     <div className="text-center mt-4">
-      <Link to="/register" className="text-indigo-600 hover:underline">
+      <a href="/register" className="text-indigo-600 hover:underline">
         Don’t have an account? Sign Up
-      </Link>
+      </a>
     </div>
   </div>
 </div>

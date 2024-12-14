@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from 'axios'
-import { Link, useNavigate } from 'react-router-dom';
+// import './App.css'
+import { useNavigate } from 'react-router-dom';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 
 function Signup() {
@@ -13,7 +14,7 @@ function Signup() {
  
     const handleSubmit = (e) => {
     e.preventDefault()
-    axios.post('https://mern-deploy-server-7gsy.onrender.com/register', {name, email, password})
+    axios.post('http://localhost:4000/register', {name, email, password})
     .then(result => {console.log(result)
         navigate('/login')
     })
@@ -22,11 +23,13 @@ function Signup() {
 
   return (
    <div className="min-h-screen flex items-center justify-center bg-gray-100 relative">
-  <div className="absolute inset-0 bg-cover bg-center z-0"
+  {/* Background Image with Blur */}
+  <div
+    className="absolute inset-0 bg-cover bg-center z-0"
     style={{
-      backgroundImage: "url('/img1.jpeg')", 
-      // filter: "blur(5px)", 
-      backgroundSize: "cover", 
+      backgroundImage: "url('/img1.jpeg')", // Path to the image in the public folder
+      // filter: "blur(5px)", // Apply blur to the background image
+      backgroundSize: "cover", // Ensures the background image covers the full container
       backgroundPosition: "center",
     }}
   ></div>
@@ -53,7 +56,6 @@ function Signup() {
           className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
           placeholder="Enter your email"
           required
-          autoComplete='User-name'
           onChange={(e) => setEmail(e.target.value)}
         />
       </div>
@@ -64,7 +66,6 @@ function Signup() {
           className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
           placeholder="Enter your password"
           required
-          autocomplete="current-password"
           onChange={(e) => setPassword(e.target.value)}
         />
       </div>
@@ -76,9 +77,9 @@ function Signup() {
       </button>
     </form>
     <div className="text-center mt-4">
-      <Link to="/login" className="text-indigo-600 hover:underline">
+      <a href="/login" className="text-indigo-600 hover:underline">
         Already have an account? Sign In
-      </Link>
+      </a>
     </div>
   </div>
 </div>

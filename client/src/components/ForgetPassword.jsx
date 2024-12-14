@@ -14,7 +14,7 @@ export const ForgetPassword = () => {
    
       const handleSubmit = (e) => {
       e.preventDefault()
-      axios.post('https://mern-deploy-server-7gsy.onrender.com/forgot-password', {email})
+      axios.post('http://localhost:4000/forgot-password', {email})
       .then(result => {
       
         if(result.data){
@@ -62,7 +62,6 @@ export const ForgetPassword = () => {
       </form>
     </div>
   </div>
-  
   )
 }
 export default ForgetPassword

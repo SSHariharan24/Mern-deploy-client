@@ -23,7 +23,7 @@ export const Contacts = () => {
 
     try {
       // Using Axios to post form data to the server
-      const response = await axios.post('https://mern-deploy-server-7gsy.onrender.com/api/sendEmail', formData);
+      const response = await axios.post('http://localhost:4000/api/sendEmail', formData);
 
       if (response.status === 200) {
         setStatusMessage('Message sent successfully!');

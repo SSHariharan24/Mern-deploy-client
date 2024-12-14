@@ -10,7 +10,7 @@ export const UpdateUser = () => {
   const navigate = useNavigate()
 
   useEffect(()=>{
-    axios.get('https://mern-deploy-server-7gsy.onrender.com/getUser/'+id) 
+    axios.get('http://localhost:4000/getUser/'+id) 
     .then(result => {console.log(result)
       setName(result.data.name)
       setEmail(result.data.email)
@@ -20,7 +20,7 @@ export const UpdateUser = () => {
 
   const Update = (e) =>{
     e.preventDefault()
-    axios.put("https://mern-deploy-server-7gsy.onrender.com/updateUser/"+id,{name,email,age})
+    axios.put("http://localhost:4000/updateUser/"+id,{name,email,age})
     .then(result => {
       console.log(result)
       navigate('/user')
