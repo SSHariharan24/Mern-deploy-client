@@ -8,11 +8,11 @@ const jwt = require('jsonwebtoken')
 const bodyParser = require('body-parser');
 const emailRoutes = require('./routes/sendEmail');
 const cookieParser = require('cookie-parser')
-import path from "path";
+const path = require  ("path");
 const nodemailer = require('nodemailer');
 const dotenv = require('dotenv')
 dotenv.config()
-const __dirname = path.resolve();
+const dirname = path.resolve();
 const app = express()
 app.use(bodyParser.json());
 app.use(cors(
@@ -26,7 +26,16 @@ app.use(cors(
 app.use(express.json())
 app.use(cookieParser())
 
-mongoose.connect("mongodb://localhost/crud")
+ const connectDB = async () =>{
+  try{
+      const conn = await mongoose.connect(process.env.MONGO_URI);
+      console.log(`MongoDB connected:${conn.connection.host}`);
+   }
+  catch(error){
+      console.log("MongDB connection error:",error);
+      
+  }
+};
 
 app.use('/api', emailRoutes);
 // this api is used for crud operation
@@ -178,11 +187,12 @@ app.post("/forgot-password", async (req, res) => {
     app.use(express.static(path.join(__dirname, "../client/dist")));
   
     app.get("*", (req, res) => {
-      res.sendFile(path.join(__dirname, "../client", "dist", "index.html"));
+      res.sendFile(path.join(dirname, "../client", "dist", "index.html"));
     });
   }
 
 app.listen(process.env.PORT, ()=>{
     console.log(`server is running ${process.env.PORT}` );
+    connectDB()
     
 })
