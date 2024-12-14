@@ -14,7 +14,7 @@ export const ForgetPassword = () => {
    
       const handleSubmit = (e) => {
       e.preventDefault()
-      axios.post('http://localhost:4000/forgot-password', {email})
+      axios.post('https://mern-deploy-client-q86t.onrender.com/forgot-password', {email})
       .then(result => {
       
         if(result.data){

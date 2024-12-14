@@ -10,7 +10,7 @@ export const UpdateUser = () => {
   const navigate = useNavigate()
 
   useEffect(()=>{
-    axios.get('http://localhost:4000/getUser/'+id) 
+    axios.get('https://mern-deploy-client-q86t.onrender.com/getUser/'+id) 
     .then(result => {console.log(result)
       setName(result.data.name)
       setEmail(result.data.email)

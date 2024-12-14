@@ -9,7 +9,7 @@ export const CreateUser = () => {
   const navigate = useNavigate()
   const submit = (e) =>{
     e.preventDefault()
-    axios.post("http://localhost:4000/createUser",{name,email,age})
+    axios.post("https://mern-deploy-client-q86t.onrender.com/createUser",{name,email,age})
     .then(result => {
       console.log(result)
       navigate('/user')

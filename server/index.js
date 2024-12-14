@@ -17,7 +17,7 @@ const app = express()
 app.use(bodyParser.json());
 app.use(cors(
     {
-    origin:["http://localhost:5173"],
+    origin:["https://mern-deploy-client-q86t.onrender.com"],
     methods:["GET","POST","PUT","DELETE"],
     credentials:true 
 }
@@ -153,7 +153,7 @@ app.post("/forgot-password", async (req, res) => {
         from: process.env.MAIL,
         to: email,
         subject: "Reset Password",
-        text: `http://localhost:5173/reset-password/${encodedToken}`,
+        text: `https://mern-deploy-client-q86t.onrender.com/${encodedToken}`,
       };
   
       transporter.sendMail(mailOptions, function (error, info) {

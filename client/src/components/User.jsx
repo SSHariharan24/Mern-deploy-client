@@ -8,7 +8,7 @@ export const User = () => {
   const [filterusers,setFilterusers] = useState("")
  axios.defaults.withCredentials = true
   useEffect(()=>{
-    axios.get('http://localhost:4000/get')
+    axios.get('https://mern-deploy-client-q86t.onrender.com/get')
     .then((result) => {
       setUsers(result.data)
     })
@@ -17,7 +17,7 @@ export const User = () => {
   })
   const navigate = useNavigate()
   const handlelogout=()=>{
-    axios.get('http://localhost:4000/logout')
+    axios.get('https://mern-deploy-client-q86t.onrender.com/logout')
     .then(res=>{
       if(res.data.status){
         navigate('/')
@@ -29,7 +29,7 @@ export const User = () => {
   }
 
   const handleDelete =  (id) => {
-    axios.delete("http://localhost:4000/deleteUser/"+id)
+    axios.delete("https://mern-deploy-client-q86t.onrender.com/deleteUser/"+id)
     .then(res => {
       console.log(res)
       window.location.reload()})
