@@ -1,10 +1,17 @@
 import React from "react";
 import { FaFacebook, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-
+import 'remixicon/fonts/remixicon.css';
+import { motion } from "framer-motion";
+import {fadeIn} from './variants.js'
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-8">
-      <div className="container mx-auto px-8 md:px-16 lg:px-24">
+    <footer className="bg-black text-white dark:bg-gray-800 dark:text-white  py-8">
+      <motion.div
+      variants={fadeIn("right",0.2)}
+      initial={{opacity:0}}
+      whileInView={"show"}
+      viewport={{once:false,amount:0.7}}
+      className="container mx-auto px-8 md:px-16 lg:px-24">
         <div className="flex flex-col md:flex-row md:space-x-12 items-center mb-4">
           <div className="flex-1 mb-4 md:mb-0">
             <h3 className="text-2xl font-bold mb-2">Hariharan s s</h3>
@@ -60,9 +67,19 @@ const Footer = () => {
             <a href="#" className="text-gray-400 hover:text-white">
               Terms of Service
             </a>
+  <motion.a
+  href="#"
+  initial={{ y: 0 }}
+  whileHover={{ y: -10, boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)" }}
+  transition={{ type: "spring", stiffness: 300 }}
+  className="fixed right-4 bottom-4 bg-gradient-to-r from-green-400 to-blue-500 shadow-sm px-3 py-2 md:px-4 md:py-3 rounded-full text-lg z-50"
+  aria-label="Scroll to top"
+>
+  <i className="ri-arrow-up-line text-white"></i>
+</motion.a>
           </div>
         </div>
-      </div>
+      </motion.div>
     </footer>
   );
 };

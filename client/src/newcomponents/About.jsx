@@ -1,12 +1,31 @@
 import React from 'react'
-import AboutImage from '../assets/about-me.jpg'
+import AboutImage from '../assets/hari.jpg'
+import { motion } from "framer-motion";
+
+import {fadeIn} from './variants.js'
 export const About = () => {
   return (
-    <div className='bg-black text-white py-20' id="About">
+    <div className='bg-black text-white dark:bg-gray-800 dark:text-white text-center py-24' id="About">
         <div className='container mx-auto px-8 md:px-16 lg:px-24'>
-            <h2 className='text-4xl font-bold text-center mb-12'>About Me</h2>
-            <div className='flex flex-col md:flex-row items-center md:space-x-12'>
-                <img src={AboutImage} alt="" className='w-72 h-80 rounded object-cover mb-8 md:mb-0' />
+            <motion.h2  variants={fadeIn("left",0.5)}
+                initial={{opacity:0}}
+                whileInView={"show"}
+                viewport={{once:false,amount:0.7}}
+                 className='text-4xl font-bold text-center mb-12'>About Me</motion.h2>
+            <motion.div 
+             variants={fadeIn("up",0.5)}
+             initial={{opacity:1}}
+             whileInView={"show"}
+            //  whileHover="hover"
+             viewport={{once:false,amount:0.7}}
+            className='flex flex-col md:flex-row items-center md:space-x-12'>
+                <motion.img
+                variants={fadeIn("up",0.5)}
+                initial={{opacity:0}}
+                whileInView={"show"}
+                whileHover="hover"
+                viewport={{once:false,amount:0.7}}
+                src={AboutImage} alt="" className='w-72 h-80 rounded object-cover mb-8 md:mb-0' />
                <div className='flex-1'>
                  <p className='text-lg mb-8'>
                 I am a passionate full-stack developer with a focus on building
@@ -58,7 +77,13 @@ export const About = () => {
 
                 </div>
 
-            <div className='mt-12 flex justify-around text-center'>
+            <motion.div 
+             variants={fadeIn("left",0.5)}
+             initial="hidden"
+             whileInView={"show"}
+            //  whileHover="hover"
+             viewport={{once:false,amount:0.7}}
+            className='mt-12 flex justify-around text-center'>
                 <div>
                     <h3 className='text-2xl font-bold text-transparent bg-clip-text
                     bg-gradient-to-r from-green-400 to-blue-500'>
@@ -84,10 +109,10 @@ export const About = () => {
                     <p>Happy clients</p>
                 </div> */}
                 
-            </div>
+            </motion.div>
 
 </div>
-    </div>
+    </motion.div>
         </div>
             </div>
   )
