@@ -21,3 +21,35 @@ body, html {
     /* overflow: hidden; */
     transition: height 0.3s ease-in-out, transform 0.3s;
   }
+  
+  :root {
+    --bg-light: white;
+    --text-light: black;
+    --bg-dark: #1a202c;
+    --text-dark: white;
+  }
+  
+  body {
+    background-color: var(--bg-light);
+    color: var(--text-light);
+  }
+  
+  body.dark {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+  }
+  
+  /* Apply dark mode to all components when the body has the 'dark' class */
+  .dark .hero, .dark .about, .dark .projects, .dark .service, .dark .footer, .dark .contacts {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-white text-black dark:bg-black dark:text-white;
+    margin: 0;
+  }

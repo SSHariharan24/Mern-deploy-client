@@ -34,7 +34,7 @@ export const Service = () => {
   };
 
   return (
-    <div className="bg-black text-white dark:bg-gray-800 dark:text-white text-center py-24" id="Service">
+    <div className="dark:bg-black  dark:text-white text-center py-24" id="Service">
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
         <motion.h2
           variants={fadeIn("right", 0.2)}
@@ -63,7 +63,7 @@ export const Service = () => {
               whileHover="newhover1"
               exit="exit"
               viewport={{ once: false, amount: 0.7 }}
-              className={`bg-gray-700 px-6 pb-6 rounded-lg hover:shadow-lg transform duration-300 hover:scale-105 ${
+              className={`dark:bg-gray-700 bg-gray-300 px-6 pb-6 rounded-lg hover:shadow-lg transform duration-300 hover:scale-105 ${
                 activeServiceId === service.id ? "expanded" : "collapsed"
               }`}
             >
@@ -72,10 +72,10 @@ export const Service = () => {
               >
                 {service.title}
               </h3>
-              <p className="mt-2 text-gray-300">
+              <p className="mt-2 dark:text-gray-300">
                 {service.description}
                 {activeServiceId === service.id && (
-                  <span className="text-gray-300"> {service.fullDescription}</span>
+                  <span className="dark:text-gray-300"> {service.fullDescription}</span>
                 )}
               </p>
               <a

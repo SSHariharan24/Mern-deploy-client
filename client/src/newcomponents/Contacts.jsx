@@ -47,7 +47,7 @@ export const Contacts = () => {
   };
 
   return (
-    <div className="bg-black text-white dark:bg-gray-800 dark:text-white  py-20" id="Contacts">
+    <div className="dark:bg-black  dark:text-white  py-20" id="Contacts">
       <motion.div
       variants={fadeIn("right",0.2)}
       initial={{opacity:0}}
@@ -59,7 +59,7 @@ export const Contacts = () => {
         initial="hidden"
         whileInView={"show"}
         viewport={{once:false,amount:0.7}}
-        className="text-4xl font-bold text-center mb-12">Contact Me</motion.h2>
+        className="text-4xl text-black dark:text-white font-bold text-center mb-12">Contact Me</motion.h2>
         <motion.div 
          variants={fadeIn("right",0.5)}
                         initial="hidden"

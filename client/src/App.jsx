@@ -10,9 +10,24 @@ import Home from "./components/Home"
 import ForgetPassword from "./components/ForgetPassword"
 import {ToastContainer} from "react-toastify"
 import ResetPassword from './components/ResetPassword';
+
+import { ThemeProvider, useTheme } from "./newcomponents/ThemeContext";
+import { FaBars, FaTimes, FaSun, FaMoon } from "react-icons/fa";
+
+export const ThemeToggleButton = () => {
+  const { isDarkMode, toggleTheme } = useTheme();
+  return (
+    <button className='hidden' onClick={toggleTheme}>
+      {isDarkMode ? <FaMoon className="text-gray-400" /> : <FaSun className="text-yellow-400"/>}
+    </button>
+  );
+};
+
 function App() {
   return (
-    <div>
+    <ThemeProvider>
+    <div className="App">
+    <ThemeToggleButton />
       <BrowserRouter>
       <Routes>
       <Route path='/Home' element={<Home/>}></Route>
@@ -27,7 +42,8 @@ function App() {
       </Routes>
       <ToastContainer/>
       </BrowserRouter>
-    </div>
+      </div>
+      </ThemeProvider>
   )
 }
 

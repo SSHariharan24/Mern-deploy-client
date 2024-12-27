@@ -66,7 +66,7 @@ const projects = [
 
 export const Projects = () => {
   return (
-    <div className='home_data bg-black text-white dark:bg-gray-800 dark:text-white text-center py-28' id="Projects">
+    <div className='home_data  text-white dark:bg-black dark:text-white text-center py-28' id="Projects">
     <div className='container mx-auto px-8 md:px-16 lg:px-24'>
         <motion.h2 
         variants={fadeIn("right",0.2)}
@@ -83,12 +83,12 @@ export const Projects = () => {
     whileInView={"show"}
     whileHover="newhover1"
     viewport={{once:false,amount:0.7}}
-            key={project.id} className="bg-gray-700 p-6 rounded-lg hover:shadow-lg 
+            key={project.id} className="dark:bg-gray-700 bg-gray-300 p-6 rounded-lg hover:shadow-lg 
             transform transition-transform duration-0 hover:scale-105">
               <img src={project.image} alt={project.name} className="rounded-lg mb-4 
               w-full h-48 object-cover" />
-              <h3 className="text-2xl font-bold mb-2">{project.name}</h3>
-              <p className="text-gray-400 mb-4">{project.technologies}</p>
+              <h3 className="text-2xl text-black dark:text-white font-bold mb-2">{project.name}</h3>
+              <p className="text-black dark:text-white mb-4">{project.technologies}</p>
               <a href={project.github} className="inline-block bg-gradient-to-r 
               from-green-400 to-blue-500 text-white px-4 py-2 rounded-full" target="_blank" 
               rel="noopener noreferrer">GitHub</a>

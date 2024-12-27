@@ -5,13 +5,13 @@ import { motion } from "framer-motion";
 import {fadeIn} from './variants.js'
 export const About = () => {
   return (
-    <div className='bg-black text-white dark:bg-gray-800 dark:text-white text-center py-24' id="About">
+    <div className='dark:bg-black text-white  dark:text-white text-center py-24' id="About">
         <div className='container mx-auto px-8 md:px-16 lg:px-24'>
             <motion.h2  variants={fadeIn("left",0.5)}
                 initial={{opacity:0}}
                 whileInView={"show"}
                 viewport={{once:false,amount:0.7}}
-                 className='text-4xl font-bold text-center mb-12'>About Me</motion.h2>
+                 className='text-4xl text-black dark:text-white font-bold text-center mb-12'>About Me</motion.h2>
             <motion.div 
              variants={fadeIn("up",0.5)}
              initial={{opacity:1}}
@@ -27,7 +27,7 @@ export const About = () => {
                 viewport={{once:false,amount:0.7}}
                 src={AboutImage} alt="" className='w-72 h-80 rounded object-cover mb-8 md:mb-0' />
                <div className='flex-1'>
-                 <p className='text-lg mb-8'>
+                 <p className='text-lg text-black dark:text-white mb-8'>
                 I am a passionate full-stack developer with a focus on building
               modern and responsive web applications. With a strong foundation
               in both frontend and backend technologies, I strive to create
@@ -36,7 +36,7 @@ export const About = () => {
 
                 <div className='space-y-4'>
                     <div className='flex items-center'>
-                        <label htmlFor="htmlandcss" className='w-2/12'>HTML CSS & JS</label>
+                        <label htmlFor="htmlandcss" className='w-2/12 text-black dark:text-white'>HTML CSS & JS</label>
                         <div className='grow bg-gray-800 rounded-full h-2.5'>
                             <div className='bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full
                             transform transition-transform duration-300 hover:scale-105 w-10/12'>
@@ -46,7 +46,7 @@ export const About = () => {
                     </div>
 
                     <div className='flex items-center'>
-                        <label htmlFor="reactjs" className='w-2/12'>REACT JS</label>
+                        <label htmlFor="reactjs" className='w-2/12 text-black dark:text-white'>REACT JS</label>
                         <div className='grow bg-gray-800 rounded-full h-2.5'>
                             <div className='bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full
                             transform transition-transform duration-300 hover:scale-105 w-11/12'>
@@ -56,7 +56,7 @@ export const About = () => {
                     </div>
 
                     <div className='flex items-center'>
-                        <label htmlFor="nodeandexpressjs" className='w-2/12'>NODE & EXPRESS JS</label>
+                        <label htmlFor="nodeandexpressjs" className='w-2/12 text-black dark:text-white'>NODE & EXPRESS JS</label>
                         <div className='grow bg-gray-800 rounded-full h-2.5'>
                             <div className='bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full
                             transform transition-transform duration-300 hover:scale-105 w-9/12'>
@@ -66,7 +66,7 @@ export const About = () => {
                     </div>
 
                     <div className='flex items-center'>
-                        <label htmlFor="Mongodb" className='w-2/12'>MONGO DB</label>
+                        <label htmlFor="Mongodb" className='w-2/12 text-black dark:text-white'>MONGO DB</label>
                         <div className='grow bg-gray-800 rounded-full h-2.5'>
                             <div className='bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full
                             transform transition-transform duration-300 hover:scale-105 w-10/12'>
@@ -89,7 +89,7 @@ export const About = () => {
                     bg-gradient-to-r from-green-400 to-blue-500'>
                     3+
                     </h3>
-                    <p>Months Intern Experience</p>
+                    <p className='text-black dark:text-white'>Months Intern Experience</p>
                 </div>
 
                 <div>
@@ -97,7 +97,7 @@ export const About = () => {
                     bg-gradient-to-r from-green-400 to-blue-500'>
                     10+
                     </h3>
-                    <p>Project Completed</p>
+                    <p className='text-black dark:text-white'>Project Completed</p>
                 </div>
 
                 
