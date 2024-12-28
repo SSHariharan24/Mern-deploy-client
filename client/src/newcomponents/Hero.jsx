@@ -5,7 +5,7 @@ import { fadeIn } from './variants.js';
 
 export const Hero = () => {
   return (
-    <div className="dark:bg-black text-black  dark:text-white  text-center py-28" id="Hero">
+    <div className="dark:bg-black dark:text-white  text-center py-28" id="Hero">
       <motion.img
         variants={fadeIn("right", 0.2)}
         initial={{ opacity: 0 }}
@@ -25,7 +25,7 @@ export const Hero = () => {
         whileTap="tap"
         exit="exit"
         viewport={{ once: false, amount: 0.7 }}
-        className="text-4xl font-bold"
+        className="text-4xl dark:text-white font-bold"
       >
         I'm {""}
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">Hariharan</span>
@@ -38,7 +38,7 @@ export const Hero = () => {
         whileTap="tap"
         exit="exit"
         viewport={{ once: false, amount: 0.7 }}
-        className="mt-4 text-lg text-black dark:text-gray-200"
+        className="mt-4 text-lg  dark:text-gray-200"
       >
         I specialize in building modern and responsive web applications
       </motion.p>
