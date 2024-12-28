@@ -22,7 +22,7 @@ body, html {
     transition: height 0.3s ease-in-out, transform 0.3s;
   }
   
-  /* :root {
+  :root {
     --bg-light: white;
     --text-light: black;
     --bg-dark: #1a202c;
@@ -37,19 +37,19 @@ body, html {
   body.dark {
     background-color: var(--bg-dark);
     color: var(--text-dark);
-  } */
+  }
   
   /* Apply dark mode to all components when the body has the 'dark' class */
-  /* .dark .hero, .dark .about, .dark .projects, .dark .service, .dark .footer, .dark .contacts {
+  .dark .hero, .dark .about, .dark .projects, .dark .service, .dark .footer, .dark .contacts {
     background-color: var(--bg-dark);
     color: var(--text-dark);
-  } */
+  }
   
   html {
     scroll-behavior: smooth;
   }
   
-  /* body {
+  body {
     @apply bg-white text-black dark:bg-black dark:text-white;
     margin: 0;
-  } */
+  }
