@@ -58,7 +58,7 @@ export const Navbar = () => {
       <div
         className={`${
           isOpen ? "max-h-screen" : "max-h-0"
-        } overflow-hidden transition-all duration-300 md:hidden dark:bg-black dark:text-white bg-white text-black backdrop-blur-lg`}
+        } overflow-hidden transition-all duration-300 md:hidden  backdrop-blur-lg`}
       >
         <div className="flex flex-col items-center space-y-4 py-4">
           <a

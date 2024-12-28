@@ -83,7 +83,7 @@ export const Projects = () => {
     whileInView={"show"}
     whileHover="newhover1"
     viewport={{once:false,amount:0.7}}
-            key={project.id} className="p-6 rounded-lg hover:shadow-lg 
+            key={project.id} className="dark:bg-gray-800 bg-gray-100 p-6 rounded-lg hover:shadow-lg 
             transform transition-transform duration-0 hover:scale-105">
               <img src={project.image} alt={project.name} className="rounded-lg mb-4 
               w-full h-48 object-cover" />
