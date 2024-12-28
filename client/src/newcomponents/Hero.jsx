@@ -5,7 +5,7 @@ import { fadeIn } from './variants.js';
 
 export const Hero = () => {
   return (
-    <div className="hero bg-light dark:bg-black text-light dark:text-white  text-center py-28" id="Hero">
+    <div className="dark:bg-black text-black  dark:text-white  text-center py-28" id="Hero">
       <motion.img
         variants={fadeIn("right", 0.2)}
         initial={{ opacity: 0 }}
@@ -38,7 +38,7 @@ export const Hero = () => {
         whileTap="tap"
         exit="exit"
         viewport={{ once: false, amount: 0.7 }}
-        className="mt-4 text-lg text-gray-300"
+        className="mt-4 text-lg text-black dark:text-gray-200"
       >
         I specialize in building modern and responsive web applications
       </motion.p>
