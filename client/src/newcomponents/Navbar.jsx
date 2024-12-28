@@ -12,7 +12,7 @@ export const Navbar = () => {
 
   return (
     <nav
-    className={`navbar fixed top-0 left-0 w-full bg-white text-black dark:bg-black dark:text-white backdrop-blur-lg px-8 md:px-16 lg:px-24 z-50 shadow-md`}
+    className={`navbar fixed top-0 left-0 w-full  dark:bg-black dark:text-white backdrop-blur-lg px-8 md:px-16 lg:px-24 z-50 shadow-md`}
       id="navbar"
     >
       <div className="container py-3 flex justify-between items-center">

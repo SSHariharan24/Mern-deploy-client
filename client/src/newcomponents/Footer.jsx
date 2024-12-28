@@ -15,7 +15,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row md:space-x-12 items-center mb-4">
           <div className="flex-1 mb-4 md:mb-0">
             <h3 className="text-2xl font-bold mb-2">Hariharan s s</h3>
-            <p className="text-black dark:text-white">
+            <p >
               Full-Stack Developer based in the INDIA, specializing in web and
               software development.
             </p>
@@ -43,28 +43,28 @@ const Footer = () => {
           className="border-t border-gray-600 pt-4 flex flex-col md:flex-row 
           justify-between items-center"
         >
-          <p className="text-black dark:text-white">
+          <p>
             &copy; {new Date().getFullYear()} Hariharan SS. All rights reserved.
           </p>
           <div className="flex space-x-4 my-4 md:my-0">
-            <a href="#" className="text-black dark:text-gray-400 dark:hover:text-white">
+            <a href="#" className="dark:hover:text-gray-400 ">
               <FaFacebook />
             </a>
-            <a href="#" className="text-black dark:text-gray-400 dark:hover:text-white">
+            <a href="#" className="dark:hover:text-gray-400">
               <FaTwitter />
             </a>
-            <a href="#" className="text-black dark:text-gray-400 dark:hover:text-white">
+            <a href="#" className="dark:hover:text-gray-400">
               <FaLinkedin />
             </a>
-            <a href="#" className="text-black dark:text-gray-400 dark:hover:text-white">
+            <a href="#" className="dark:hover:text-gray-400">
               <FaGithub />
             </a>
           </div>
           <div className="flex space-x-4">
-            <a href="#" className="text-black dark:text-gray-400 dark:hover:text-white">
+            <a href="#" className="dark:hover:text-gray-400">
               Privacy
             </a>
-            <a href="#" className="text-black dark:text-gray-400 dark:hover:text-white">
+            <a href="#" className="dark:hover:text-gray-400">
               Terms of Service
             </a>
   <motion.a

@@ -5,7 +5,7 @@ import { fadeIn } from './variants.js';
 
 export const About = () => {
   return (
-    <div className='dark:bg-black text-black dark:text-white text-center py-24' id="About">
+    <div className='dark:bg-black dark:text-white text-center py-24' id="About">
       <div className='container mx-auto px-8 md:px-16 lg:px-24'>
         
         {/* Title with animation */}

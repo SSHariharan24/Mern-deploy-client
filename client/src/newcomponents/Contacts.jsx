@@ -59,7 +59,7 @@ export const Contacts = () => {
         initial="hidden"
         whileInView={"show"}
         viewport={{once:false,amount:0.7}}
-        className="text-4xl text-black dark:text-white font-bold text-center mb-12">Contact Me</motion.h2>
+        className="text-4xl  font-bold text-center mb-12">Contact Me</motion.h2>
         <motion.div 
          variants={fadeIn("right",0.5)}
                         initial="hidden"
